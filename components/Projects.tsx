@@ -8,29 +8,32 @@ export default function Projects() {
       <h3 className='mb-6'>
         Some of the projects I&apos;ve built with a team and as a side project:
       </h3>
-      <div>
-        <div className='flex sm:flex-wrap gap-x-[4%] gap-y-10 mb-3 pb-3 overflow-auto'>
+      <div className='flex sm:flex-wrap gap-x-[4%] gap-y-10 mb-3 pb-3 overflow-auto'>
+        <div className='basis-[48%]'>
           <Card
             imgSrc='/assets/screenshot.png'
             title='Project card'
             description='Project description'
             codeLink='https://github.com/BekzodIsakov'
           />
-
+        </div>
+        <div className='basis-[48%]'>
           <Card
             imgSrc='/assets/screenshot.png'
             title='Project card'
             description='Project description'
             codeLink='https://github.com/BekzodIsakov'
           />
-
+        </div>
+        <div className='basis-[48%]'>
           <Card
             imgSrc='/assets/screenshot.png'
             title='Project card'
             description='Project description'
             codeLink='https://github.com/BekzodIsakov'
           />
-
+        </div>
+        <div className='basis-[48%]'>
           <Card
             imgSrc='/assets/screenshot.png'
             title='Project card'
@@ -39,7 +42,7 @@ export default function Projects() {
           />
         </div>
       </div>
-      <Link href='projects' className='link-outline'>
+      <Link href='/projects' className='link-outline'>
         View all
       </Link>
     </section>

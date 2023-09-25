@@ -36,7 +36,7 @@ export default function Card({
   prodLink = "",
 }: CardProps) {
   return (
-    <div className='bg-primary basis-[48%]'>
+    <div className='bg-primary'>
       <div className='rounded-md overflow-hidden shadow-lg mb-6'>
         <CardHeader />
         <Image
@@ -54,9 +54,9 @@ export default function Card({
         Modi alias quia id sed?
       </p>
       <div className='flex gap-3'>
-        <Link href={codeLink}>Github</Link>
-        <Link href={demoLink}>Demo</Link>
-        <Link href={prodLink}>Link</Link>
+        {codeLink && <Link href={codeLink}>Github</Link>}
+        {demoLink && <Link href={demoLink}>Demo</Link>}
+        {prodLink && <Link href={prodLink}>Link</Link>}
       </div>
     </div>
   );

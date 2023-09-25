@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center mt-4'>
       <div className='w-1/2 sm:w-1/3 md:w-1/4 mb-4'>
         <Image
           src={"/bekzod-isakov.jpg"}
