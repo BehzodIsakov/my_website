@@ -2,7 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer utilities {
+  .bg-primary {
+    @apply bg-neutral-50;
+  }
+
+  .text-primary {
+    @apply text-neutral-600;
+  }
+
+  .text-secondary {
+    @apply text-neutral-500;
+  }
+}
+
+@layer components {
+  .link-fill {
+    @apply inline-block bg-neutral-800 hover:opacity-90 text-neutral-100 font-light py-2.5 px-8 mt-4 rounded-md;
+  }
+
+  .link-outline {
+    @apply inline-block border border-neutral-500 py-1.5 px-4 rounded-sm;
+  }
+
+  .text-gradient-primary {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-pink-600 to-yellow-600;
+  }
+
+  .text-gradient-secondary {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-blue-600;
+  }
+
+  .text-gradient-ternary {
+    @apply text-transparent bg-clip-text bg-gradient-to-bl from-sky-400 to-blue-950;
+  }
+}
+
+@layer base {
+  :root {
+    --bg-color: theme(colors.neutral.50);
+    --font-primary: theme(colors.neutral.600);
+    --font-secondary: theme(colors.neutral.500);
+    --dot-color: theme(colors.neutral.400);
+    --dot-size: 1px;
+    --dot-space: 22px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-neutral-700 mb-[0.6em] w-fit bg-primary;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg text-secondary;
+  }
+
+  p {
+    @apply mb-3 bg-primary;
+  }
+
+  a {
+    @apply hover:transition-opacity hover:opacity-70;
+  }
+
+  body {
+    @apply text-primary;
+    background: linear-gradient(
+          90deg,
+          var(--bg-color) calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      linear-gradient(
+          var(--bg-color) calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+  }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +116,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
