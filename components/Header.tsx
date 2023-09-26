@@ -6,7 +6,7 @@ import MobileNavigation from "./MobileNavigation";
 const navLinks: NavLink[] = [
   { name: "about", href: "/about" },
   { name: "projects", href: "/projects" },
-  { name: "blog", href: "/blog" },
+  { name: "blog", href: "/posts" },
   { name: "contact", href: "/contact" },
 ];
 
