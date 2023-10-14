@@ -36,6 +36,14 @@
   .text-gradient-ternary {
     @apply text-transparent bg-clip-text bg-gradient-to-bl from-sky-400 to-blue-950;
   }
+
+  .button-primary {
+    @apply px-3 py-1 rounded-sm bg-neutral-800 hover:opacity-90 text-neutral-100 font-light;
+  }
+
+  .button-secondary {
+    @apply bg-neutral-200 hover:bg-neutral-300 px-3 py-1 rounded-sm transition-colors duration-75;
+  }
 }
 
 @layer base {
