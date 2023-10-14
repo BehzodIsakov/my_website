@@ -16,7 +16,9 @@ export default function Error({
     <div>
       <h2>Something went wrong!</h2>
       <h3>Please, try again.</h3>
-      <button onClick={reset}>Retry</button>
+      <button onClick={reset} className='button-primary'>
+        Retry
+      </button>
     </div>
   );
 }
