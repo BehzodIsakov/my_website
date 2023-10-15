@@ -23,7 +23,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <Link href='/projects' className='link-outline'>
+      <Link href='/projects' className='action-link-secondary'>
         View all
       </Link>
     </section>

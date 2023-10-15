@@ -27,7 +27,7 @@ export default function Profile() {
         <Link
           href='https://github.com/BekzodIsakov'
           target='_blank'
-          className='link-fill'
+          className='action-link-primary'
         >
           View Github
         </Link>

@@ -17,11 +17,11 @@
 }
 
 @layer components {
-  .link-fill {
+  .action-link-primary {
     @apply inline-block bg-neutral-800 hover:opacity-90 text-neutral-100 font-light py-2.5 px-8 mt-4 rounded-md;
   }
 
-  .link-outline {
+  .action-link-secondary {
     @apply inline-block border border-neutral-500 py-1.5 px-4 rounded-sm;
   }
 
