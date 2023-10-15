@@ -6,9 +6,9 @@ interface CardProps {
   imgSrc?: string;
   title: string;
   description: string;
-  codeLink: string;
+  srcCode: string;
   demoLink?: string;
-  prodLink?: string;
+  productionLink?: string;
 }
 
 function CardHeader() {
@@ -31,9 +31,9 @@ export default function Card({
   title,
   description,
   imgSrc = "",
-  codeLink,
+  srcCode,
   demoLink = "",
-  prodLink = "",
+  productionLink = "",
 }: CardProps) {
   return (
     <div className='bg-primary'>
@@ -43,20 +43,32 @@ export default function Card({
           src={imgSrc}
           alt={title}
           width={500}
-          height={500}
+          height={340}
           className='w-full'
         />
       </div>
       <h4 className='text-xl font-semibold'>{title}</h4>
-      <p className='text-sm'>
+      <p className='text-sm line-clamp-3'>
         {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Laboriosam perferendis officia qui quaerat, pariatur necessitatibus!
         Modi alias quia id sed?
       </p>
       <div className='flex gap-3'>
-        {codeLink && <Link href={codeLink}>Github</Link>}
-        {demoLink && <Link href={demoLink}>Demo</Link>}
-        {prodLink && <Link href={prodLink}>Link</Link>}
+        {srcCode && (
+          <Link target='_blank' href={srcCode}>
+            Github
+          </Link>
+        )}
+        {demoLink && (
+          <Link target='_blank' href={demoLink}>
+            Demo
+          </Link>
+        )}
+        {productionLink && (
+          <Link target='_blank' href={productionLink}>
+            Production
+          </Link>
+        )}
       </div>
     </div>
   );
