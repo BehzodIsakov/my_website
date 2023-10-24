@@ -23,6 +23,17 @@ export const projects: Project[] = [
       demo: "https://www.youtube.com/watch?v=lnrNaOMfSTA&ab_channel=user",
     },
   },
+  {
+    title: "Weather app",
+    description:
+      "A weather app that features geocoding search, auto locating current location and show current date for the different location, weather details and weather forecast for upcoming 7 days",
+    imgSrc: "/assets/sc-weather.png",
+    links: {
+      production: "https://bekzodisakov.github.io/weather_app/",
+      srcCode: "https://github.com/BekzodIsakov/weather_app",
+      demo: "",
+    },
+  },
 ];
 
 export const technologies: string[] = [
