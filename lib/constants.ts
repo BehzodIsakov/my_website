@@ -24,3 +24,30 @@ export const projects: Project[] = [
     },
   },
 ];
+
+export const technologies: string[] = [
+  "HTML5",
+  "CSS",
+  "Bootstrap",
+  "Tailwind",
+  "Javascript",
+  "Typescript",
+  "React",
+  "Next.js",
+  "Git",
+  "Github",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "Redux/Toolkit",
+];
+
+export const skills: string[] = [
+  "Responsive design",
+  "Cross-Browser Compatibility",
+  "Version Control",
+  "Testing and Debugging",
+  "Web Performance",
+  "Soft skills",
+];
