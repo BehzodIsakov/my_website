@@ -15,12 +15,6 @@ export default function Skills() {
         {skills.map((s, i) => (
           <li key={i}>{s}</li>
         ))}
-        <li>Responsive design</li>
-        <li>Cross-Browser Compatibility</li>
-        <li>Version Control</li>
-        <li>Testing and Debugging</li>
-        <li>Web Performance</li>
-        <li>Soft skills</li>
       </ul>
     </section>
   );

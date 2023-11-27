@@ -18,6 +18,16 @@ export default function MobileNavigation({
     setIsHidden(true);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!isHidden) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }, [isHidden]);
+
   return (
     <div className='sm:hidden'>
       <button
