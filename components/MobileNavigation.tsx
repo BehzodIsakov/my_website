@@ -71,6 +71,18 @@ export default function MobileNavigation({
           </button>
         </div>
         <ul className='flex flex-col font-medium capitalize'>
+          <li>
+            <Link
+              href={"/"}
+              className={clsx(
+                pathname === "/" && "text-indigo-500",
+                "block py-2 pl-3 pr-4 text-center"
+              )}
+            >
+              Home
+            </Link>
+          </li>
+
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
