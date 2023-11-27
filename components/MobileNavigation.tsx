@@ -4,16 +4,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink } from "@/lib/types";
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MobileNavigation({
   navLinks,
 }: {
   navLinks: NavLink[];
 }) {
+  const [isHidden, setIsHidden] = useState(true);
   const pathname = usePathname();
 
-  const [isHidden, setIsHidden] = useState(true);
+  useEffect(() => {
+    setIsHidden(true);
+  }, [pathname]);
 
   return (
     <div className='sm:hidden'>
@@ -45,10 +48,28 @@ export default function MobileNavigation({
       <div
         className={clsx(
           isHidden && "hidden",
-          "fixed left-4 right-4 mt-1 rounded-sm bg-neutral-100 shadow-md"
+          "fixed top-0 left-0 right-0 rounded-sm bg-neutral-100 shadow-md min-h-screen"
         )}
         id='navbar-hamburger'
       >
+        <div className='flex justify-end pt-1 pr-2'>
+          <button onClick={() => setIsHidden(true)}>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='w-6 h-6'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M6 18L18 6M6 6l12 12'
+              />
+            </svg>
+          </button>
+        </div>
         <ul className='flex flex-col font-medium capitalize'>
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -59,7 +80,7 @@ export default function MobileNavigation({
                   href={link.href}
                   className={clsx(
                     isActive && "text-indigo-500",
-                    "block py-2 pl-3 pr-4"
+                    "block py-2 pl-3 pr-4 text-center"
                   )}
                 >
                   {link.name}
