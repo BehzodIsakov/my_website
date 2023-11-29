@@ -58,11 +58,11 @@ export default function MobileNavigation({
       <div
         className={clsx(
           isHidden && "hidden",
-          "fixed top-0 left-0 right-0 rounded-sm bg-neutral-100 shadow-md min-h-screen"
+          "bg-dotted fixed top-0 left-0 right-0 rounded-sm bg-neutral-100 shadow-md min-h-screen"
         )}
         id='navbar-hamburger'
       >
-        <div className='flex justify-end pt-1 pr-2'>
+        <div className='flex justify-end pt-3 pr-3'>
           <button onClick={() => setIsHidden(true)}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -80,7 +80,7 @@ export default function MobileNavigation({
             </svg>
           </button>
         </div>
-        <ul className='flex flex-col font-medium capitalize'>
+        <ul className='flex flex-col font-medium text-xl capitalize'>
           <li>
             <Link
               href={"/"}

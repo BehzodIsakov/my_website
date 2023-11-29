@@ -7,6 +7,21 @@
     @apply bg-neutral-50;
   }
 
+  .bg-dotted {
+    background: linear-gradient(
+          90deg,
+          var(--bg-color) calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      linear-gradient(
+          var(--bg-color) calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      var(--dot-color);
+  }
+
   .text-primary {
     @apply text-neutral-600;
   }
@@ -86,19 +101,7 @@
   }
 
   body {
-    @apply text-primary;
-    background: linear-gradient(
-          90deg,
-          var(--bg-color) calc(var(--dot-space) - var(--dot-size)),
-          transparent 1%
-        )
-        center / var(--dot-space) var(--dot-space),
-      linear-gradient(
-          var(--bg-color) calc(var(--dot-space) - var(--dot-size)),
-          transparent 1%
-        )
-        center / var(--dot-space) var(--dot-space),
-      var(--dot-color);
+    @apply text-primary bg-dotted;
   }
 }
 
