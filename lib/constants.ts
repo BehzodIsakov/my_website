@@ -1,5 +1,7 @@
 import { Project } from "./types";
 
+export const themes = ["light", "dark", "system"] as const;
+
 export const projects: Project[] = [
   {
     title: "Personal collections app",
