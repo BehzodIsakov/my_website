@@ -62,55 +62,57 @@ export default function MobileNavigation({
         )}
         id='navbar-hamburger'
       >
-        <div className='flex justify-end pt-3 pr-3'>
-          <button onClick={() => setIsHidden(true)}>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              strokeWidth={1.5}
-              stroke='currentColor'
-              className='w-6 h-6'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M6 18L18 6M6 6l12 12'
-              />
-            </svg>
-          </button>
+        <div className='bg-indigo-200/10 min-h-screen'>
+          <div className='flex justify-end pt-3 pr-3'>
+            <button onClick={() => setIsHidden(true)}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='w-6 h-6'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M6 18L18 6M6 6l12 12'
+                />
+              </svg>
+            </button>
+          </div>
+          <ul className='flex flex-col font-medium text-xl capitalize'>
+            <li>
+              <Link
+                href={"/"}
+                className={clsx(
+                  pathname === "/" && "text-indigo-500",
+                  "block py-2 pl-3 pr-4 text-center"
+                )}
+              >
+                Home
+              </Link>
+            </li>
+
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+
+              return (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className={clsx(
+                      isActive && "text-indigo-500",
+                      "block py-2 pl-3 pr-4 text-center"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
-        <ul className='flex flex-col font-medium text-xl capitalize'>
-          <li>
-            <Link
-              href={"/"}
-              className={clsx(
-                pathname === "/" && "text-indigo-500",
-                "block py-2 pl-3 pr-4 text-center"
-              )}
-            >
-              Home
-            </Link>
-          </li>
-
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-
-            return (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className={clsx(
-                    isActive && "text-indigo-500",
-                    "block py-2 pl-3 pr-4 text-center"
-                  )}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </div>
   );

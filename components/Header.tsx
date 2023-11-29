@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navigation from "./Navigation";
 import { NavLink } from "@/lib/types";
 import MobileNavigation from "./MobileNavigation";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const navLinks: NavLink[] = [
   { name: "about", href: "/about" },
@@ -17,6 +18,7 @@ export default function Header() {
         Bekzod Isakov
       </Link>
       <Navigation navLinks={navLinks} />
+      <ThemeSwitcher />
       <MobileNavigation navLinks={navLinks} />
     </header>
   );
