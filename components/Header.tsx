@@ -17,9 +17,13 @@ export default function Header() {
       <Link href='/' className='font-medium text-lg px-2'>
         Bekzod Isakov
       </Link>
-      <Navigation navLinks={navLinks} />
-      <ThemeSwitcher />
-      <MobileNavigation navLinks={navLinks} />
+      <div className='flex items-center'>
+        <Navigation navLinks={navLinks} />
+        <div className='ml-10 mr-4'>
+          <ThemeSwitcher />
+        </div>
+        <MobileNavigation navLinks={navLinks} />
+      </div>
     </header>
   );
 }
