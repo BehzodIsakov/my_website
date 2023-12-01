@@ -13,15 +13,15 @@ interface CardProps {
 
 function CardHeader() {
   return (
-    <div className='flex items-center gap-6 px-6 py-2 bg-gray-100'>
+    <div className='flex items-center gap-6 px-6 py-2 bg-gray-100 dark:bg-gray-700'>
       <div className='flex gap-1'>
-        <div className='bg-gray-300 rounded-full w-3 h-3'></div>
-        <div className='bg-gray-300 rounded-full w-3 h-3'></div>
-        <div className='bg-gray-300 rounded-full w-3 h-3'></div>
+        <div className='bg-gray-300 dark:bg-gray-300 rounded-full w-3 h-3'></div>
+        <div className='bg-gray-300 dark:bg-gray-300 rounded-full w-3 h-3'></div>
+        <div className='bg-gray-300 dark:bg-gray-300 rounded-full w-3 h-3'></div>
       </div>
-      <div className='h-6 grow w-10 bg-neutral-50 rounded-md'></div>
+      <div className='h-6 grow w-10 bg-neutral-50 dark:bg-gray-300 rounded-md'></div>
       <div>
-        <ArrowRightIcon className='w-5 h-5 text-gray-500 stroke-2 ' />
+        <ArrowRightIcon className='w-5 h-5 text-gray-500 dark:text-gray-400 stroke-2 ' />
       </div>
     </div>
   );
@@ -54,19 +54,19 @@ export default function Card({
         Modi alias quia id sed?
       </p>
       <div className='flex gap-3'>
-        {srcCode && (
-          <Link target='_blank' href={srcCode}>
-            Github
+        {productionLink && (
+          <Link target='_blank' href={productionLink}>
+            Link
           </Link>
         )}
         {demoLink && (
           <Link target='_blank' href={demoLink}>
-            Demo
+            Video
           </Link>
         )}
-        {productionLink && (
-          <Link target='_blank' href={productionLink}>
-            Production
+        {srcCode && (
+          <Link target='_blank' href={srcCode}>
+            Github
           </Link>
         )}
       </div>
