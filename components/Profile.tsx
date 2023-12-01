@@ -35,7 +35,7 @@ export default function Profile() {
 
       <div className='w-1/2 sm:basis-1/3 sm:shrink-0 mb-3'>
         <Image
-          src={"/bekzod-isakov.jpg"}
+          src={"/bg-transparent.png"}
           alt='Bekzod Isakov'
           width={550}
           height={550}
