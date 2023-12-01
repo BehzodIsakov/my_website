@@ -36,7 +36,7 @@ export default function Card({
   productionLink = "",
 }: CardProps) {
   return (
-    <div className='bg-primary'>
+    <div>
       <div className='rounded-md overflow-hidden shadow-lg mb-6'>
         <CardHeader />
         <Image
