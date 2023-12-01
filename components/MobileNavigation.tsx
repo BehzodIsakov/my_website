@@ -58,11 +58,11 @@ export default function MobileNavigation({
       <div
         className={clsx(
           isHidden && "hidden",
-          "bg-dotted fixed top-0 left-0 right-0 rounded-sm bg-neutral-100 shadow-md min-h-screen"
+          "bg-dotted dark:bg-dotted-dark fixed top-0 left-0 right-0 rounded-sm bg-neutral-100 shadow-md min-h-screen"
         )}
         id='navbar-hamburger'
       >
-        <div className='bg-indigo-200/10 min-h-screen'>
+        <div className='bg-indigo-200/10 dark:bg-transparent min-h-screen'>
           <div className='flex justify-end pt-3 pr-3'>
             <button onClick={() => setIsHidden(true)}>
               <svg
