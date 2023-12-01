@@ -3,6 +3,7 @@ import React, { ReactNode, useEffect, useState } from "react";
 import clsx from "clsx";
 import { themes } from "@/lib/constants";
 import { theme } from "@/lib/types";
+import { log } from "console";
 
 const ICONS: {
   light: () => ReactNode;
@@ -56,12 +57,44 @@ const ICONS: {
 };
 
 const ThemeSwitcher = () => {
-  const [currentTheme, setCurrentTheme] = useState<theme>(themes[0]);
+  const [currentTheme, setCurrentTheme] = useState<theme>(themes[2]);
   const [isOpen, setIsOpen] = useState(false);
+
+  function setInitialTheme() {
+    if (!("theme" in localStorage)) {
+      setCurrentTheme("system");
+    } else if (localStorage.theme === "light") {
+      setCurrentTheme("light");
+    } else {
+      setCurrentTheme("dark");
+    }
+  }
 
   function selectTheme(theme: theme) {
     setCurrentTheme(theme);
+    handleSaveTheme(theme);
     setIsOpen(false);
+  }
+
+  function handleSaveTheme(theme: theme) {
+    if (theme === "system") {
+      // OS preference
+      localStorage.removeItem("theme");
+    } else {
+      localStorage.theme = theme;
+    }
+  }
+
+  function changeTheme() {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }
 
   function handleOutsideClick(e: MouseEvent) {
@@ -69,6 +102,14 @@ const ThemeSwitcher = () => {
       setIsOpen(false);
     }
   }
+
+  useEffect(() => {
+    setInitialTheme();
+  }, []);
+
+  useEffect(() => {
+    changeTheme();
+  }, [currentTheme]);
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
