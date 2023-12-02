@@ -3,7 +3,6 @@ import React, { ReactNode, useEffect, useState } from "react";
 import clsx from "clsx";
 import { themes } from "@/lib/constants";
 import { theme } from "@/lib/types";
-import { log } from "console";
 
 const ICONS: {
   light: () => ReactNode;
@@ -59,6 +58,7 @@ const ICONS: {
 const ThemeSwitcher = () => {
   const [currentTheme, setCurrentTheme] = useState<theme>(themes[2]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   function setInitialTheme() {
     if (!("theme" in localStorage)) {
@@ -104,6 +104,7 @@ const ThemeSwitcher = () => {
   }
 
   useEffect(() => {
+    setIsMounted(true);
     setInitialTheme();
   }, []);
 
@@ -118,6 +119,10 @@ const ThemeSwitcher = () => {
       document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <div id='theme-switcher' className='relative flex'>
