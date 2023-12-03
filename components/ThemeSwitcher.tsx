@@ -85,17 +85,17 @@ const ThemeSwitcher = () => {
     }
   }
 
-  function changeTheme() {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }
+  // function changeTheme() {
+  //   if (
+  //     localStorage.theme === "dark" ||
+  //     (!("theme" in localStorage) &&
+  //       window.matchMedia("(prefers-color-scheme: dark)").matches)
+  //   ) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }
 
   function handleOutsideClick(e: MouseEvent) {
     if (!(e.target as HTMLElement).closest("#theme-switcher")) {
@@ -109,7 +109,7 @@ const ThemeSwitcher = () => {
   }, []);
 
   useEffect(() => {
-    changeTheme();
+    // changeTheme();
   }, [currentTheme]);
 
   useEffect(() => {
