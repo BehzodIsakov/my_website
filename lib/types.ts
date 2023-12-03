@@ -1,5 +1,3 @@
-export type theme = "light" | "dark" | "system";
-
 export interface NavLink {
   name: string;
   href: string;

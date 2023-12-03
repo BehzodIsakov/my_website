@@ -21,13 +21,15 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={inter.className}>
-        <div className='min-h-screen max-w-[900px] m-auto flex flex-col py-6 px-2 overflow-x-hidden'>
-          <Header />
-          <main className='flex flex-col gap-20 grow px-1 sm:px-12 mb-20'>
-            <ThemeProvider attribute='class'>{children}</ThemeProvider>
-          </main>
-          <Footer />
-        </div>
+        <ThemeProvider attribute='class' themes={["light", "dark"]}>
+          <div className='min-h-screen max-w-[900px] m-auto flex flex-col py-6 px-2 overflow-x-hidden'>
+            <Header />
+            <main className='flex flex-col gap-20 grow px-1 sm:px-12 mb-20'>
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
