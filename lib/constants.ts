@@ -45,6 +45,7 @@ export const technologies: string[] = [
   "Typescript",
   "React",
   "Next.js",
+  "React-query",
   "Git/Github",
   "Node.js",
   "Express.js",
