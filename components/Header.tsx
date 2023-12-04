@@ -19,7 +19,7 @@ export default function Header() {
       </Link>
       <div className='flex items-center'>
         <Navigation navLinks={navLinks} />
-        <div className='w-24 ml-10 mr-4'>
+        <div className='w-6 ml-10 mr-4'>
           <ThemeSwitcher />
         </div>
         <MobileNavigation navLinks={navLinks} />
