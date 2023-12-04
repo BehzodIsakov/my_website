@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink } from "@/lib/types";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function MobileNavigation({
   navLinks,
@@ -13,6 +13,48 @@ export default function MobileNavigation({
 }) {
   const [isHidden, setIsHidden] = useState(true);
   const pathname = usePathname();
+
+  const modalRef = useRef<HTMLDivElement>(null);
+  const modalElement = modalRef.current;
+  const focusableElements = modalElement
+    ? modalElement.querySelectorAll(
+        "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"
+      )
+    : [];
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  const handleTabKeyPress = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "Tab") {
+        if (event.shiftKey && document.activeElement === firstElement) {
+          event.preventDefault();
+          lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+          event.preventDefault();
+          firstElement.focus();
+        }
+      }
+    },
+    [firstElement, lastElement]
+  );
+
+  const handleEscKeyPress = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      setIsHidden(true);
+    }
+  };
+
+  useEffect(() => {
+    modalElement?.addEventListener("keydown", handleTabKeyPress);
+    modalElement?.addEventListener("keydown", handleEscKeyPress);
+
+    return () => {
+      modalElement?.removeEventListener("keydown", handleTabKeyPress);
+      modalElement?.removeEventListener("keydown", handleEscKeyPress);
+    };
+  }, [modalElement, handleTabKeyPress]);
 
   useEffect(() => {
     setIsHidden(true);
@@ -55,7 +97,9 @@ export default function MobileNavigation({
           />
         </svg>
       </button>
+
       <div
+        ref={modalRef}
         className={clsx(
           isHidden && "hidden",
           "bg-dotted dark:bg-dotted-dark fixed top-0 left-0 right-0 rounded-sm bg-neutral-100 shadow-md min-h-screen"
@@ -94,7 +138,7 @@ export default function MobileNavigation({
               </Link>
             </li>
 
-            {navLinks.map((link) => {
+            {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
 
               return (
