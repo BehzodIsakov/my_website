@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import { NavLink } from "@/lib/types";
 import MobileNavigation from "./MobileNavigation";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { Nunito } from "next/font/google";
 
 const navLinks: NavLink[] = [
   { name: "about", href: "/about" },
@@ -11,10 +12,15 @@ const navLinks: NavLink[] = [
   { name: "contact", href: "/contact" },
 ];
 
+const nunito = Nunito({ subsets: ["latin"] });
+
 export default function Header() {
   return (
     <header className='flex justify-between items-center mb-8'>
-      <Link href='/' className='font-medium text-lg px-2'>
+      <Link
+        href='/'
+        className={`font-semibold text-xl px-2 tracking-wide ${nunito.className}`}
+      >
         Bekzod Isakov
       </Link>
       <div className='flex items-center'>
