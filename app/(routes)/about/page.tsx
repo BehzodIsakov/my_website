@@ -14,7 +14,7 @@ export default function Page() {
         />
       </div>
       <div>
-        <h1>Hello! My name is Bekzod and I&apos;m a web-developer</h1>
+        <h1>Hello! My name is Bekzod and I&apos;m a web developer</h1>
         <p>
           I am a front-end developer with proven experience in building
           different types consumer and enterprise web apps. I love creating an
