@@ -138,7 +138,7 @@ export default function MobileNavigation({
               </Link>
             </li>
 
-            {navLinks.map((link) => {
+            {navLinks.map((link, index) => {
               const isActive = pathname === link.href;
 
               return (
