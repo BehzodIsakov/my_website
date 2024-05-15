@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <section className='flex mt-8 sm:mt-20 gap-8 items-center sm:items-start flex-col-reverse sm:flex-row'>
       <div>
-        <h1>Hello! My name is Bekzod and I&apos;m a web-developer</h1>
+        <h1>Hello! My name is Bekzod and I&apos;m a web developer</h1>
         <p>
           I am a front-end developer with proven experience in building
           different types of consumer and enterprise web apps. I love creating
