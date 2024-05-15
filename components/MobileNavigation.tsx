@@ -125,13 +125,13 @@ export default function MobileNavigation({
               </svg>
             </button>
           </div>
-          <ul className='flex flex-col font-medium text-xl capitalize'>
+          <ul className='flex flex-col items-center font-medium text-xl capitalize'>
             <li>
               <Link
                 href={"/"}
                 className={clsx(
                   pathname === "/" && "text-indigo-500",
-                  "block py-2 pl-3 pr-4 text-center"
+                  "block py-2 px-3 text-center"
                 )}
               >
                 Home
@@ -147,7 +147,7 @@ export default function MobileNavigation({
                     href={link.href}
                     className={clsx(
                       isActive && "text-indigo-500",
-                      "block py-2 pl-3 pr-4 text-center"
+                      "block py-2 px-3 text-center"
                     )}
                   >
                     {link.name}
