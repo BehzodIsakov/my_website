@@ -8,7 +8,11 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      outlineOffset: {
+        3: '3px',
+      }
+    },
   },
   plugins: [],
 };

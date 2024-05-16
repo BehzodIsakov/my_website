@@ -102,6 +102,7 @@
     --bg-color-dark: theme(colors.gray.800);
     --dot-color: theme(colors.neutral.400);
     --dot-color-dark: theme(colors.gray.600);
+    --indigo: theme(colors.indigo.400);
     --dot-size: 1px;
     --dot-space: 22px;
   }
@@ -137,5 +138,13 @@
 
   a {
     @apply hover:transition-opacity hover:opacity-70;
+  }
+
+  a[href]:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-indigo-400 outline-offset-3;
   }
 }
