@@ -53,7 +53,7 @@ export default function Card({
         Laboriosam perferendis officia qui quaerat, pariatur necessitatibus!
         Modi alias quia id sed?
       </p>
-      <div className='flex gap-3'>
+      <div className='flex gap-3 px-1'>
         {productionLink && (
           <Link target='_blank' href={productionLink}>
             Link
