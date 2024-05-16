@@ -131,7 +131,7 @@ export default function MobileNavigation({
                 href={"/"}
                 className={clsx(
                   pathname === "/" && "text-indigo-500",
-                  "block py-2 px-3 text-center"
+                  "block px-2 mb-4 text-center"
                 )}
               >
                 Home
@@ -147,7 +147,7 @@ export default function MobileNavigation({
                     href={link.href}
                     className={clsx(
                       isActive && "text-indigo-500",
-                      "block py-2 px-3 text-center"
+                      "block px-2 mb-4 text-center"
                     )}
                   >
                     {link.name}
