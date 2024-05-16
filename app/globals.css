@@ -67,11 +67,11 @@
 }
 
 @layer components {
-  .action-link-primary {
+  .button-link-primary {
     @apply inline-block bg-neutral-800 dark:bg-neutral-800 hover:opacity-90 text-neutral-100 font-light py-2.5 px-8 mt-4 rounded-md;
   }
 
-  .action-link-secondary {
+  .button-link-secondary {
     @apply inline-block border border-neutral-500 py-1.5 px-4 rounded-sm;
   }
 
@@ -145,6 +145,7 @@
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    @apply outline-indigo-400 outline-offset-3;
+    @apply outline-offset-3;
+    outline-color: var(--indigo);
   }
 }

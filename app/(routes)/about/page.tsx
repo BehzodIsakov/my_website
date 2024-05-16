@@ -41,7 +41,7 @@ export default function Page() {
         <Link
           href='https://github.com/BekzodIsakov'
           target='_blank'
-          className='action-link-primary'
+          className='button-link-primary'
         >
           View Github
         </Link>

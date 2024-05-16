@@ -7,7 +7,7 @@ export default function Posts() {
       <h3 className='mb-5'>
         Sharing my thoughts on things I&apos;m learning and building
       </h3>
-      <Link href='/posts' className='action-link-secondary'>
+      <Link href='/posts' className='button-link-secondary'>
         See posts
       </Link>
     </section>
