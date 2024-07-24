@@ -14,28 +14,28 @@ export default function Page() {
         />
       </div>
       <div>
-        <h1>Hello! My name is Bekzod and I&apos;m a web-developer</h1>
+        <h1>Hello! My name is Bekzod and I am a web-developer</h1>
         <p>
-          I am a front-end developer with proven experience in building
-          different types consumer and enterprise web apps. I love creating an
-          aesthetic design into a user-friendly, responsive and fast product.
+          I am a front-end developer with knowledge in backend technologies such
+          as Node.js and MongoDB. Although my main focus is on frontend
+          technologies, I always try to find time to enhance my backend skills.
+          I am currently teaching frontend technologies at one of the top
+          bootcamps in the country, which helps me identify gaps in my knowledge
+          and improve my foundational skills. This role also allows me to
+          understand how the entire web ecosystem works together.
         </p>
         <p>
-          I first began to learn coding as a hobby. After a few months of
-          enjoying building a few things with HTML and CSS, I decided to quit my
-          job to learn programming full time.
+          I have nearly 2 years of experience working on real-world
+          applications, from building static landing pages in Next.js to
+          developing CRM systems for offices with thousands of clients. Learning
+          programming through self-study taught me how to plan my learning path
+          and solve problems independently.
         </p>
         <p>
-          My first internship was in a startup named Transform. It was my first
-          exposure to writing real world software and working with designers,
-          backend developers and product owner. After 6 months of working for
-          Transform, I joined a coding bootcamp as a front-end developer. With
-          the new team, we worked on several consumer and enterprise apps such
-          as food delivery PWA(Progressive Web App), CMS and CRM systems and
-          online learning platform. Through these experiences, I learnt to work
-          in a team, collaborate with other teams, work with product managers,
-          follow set deadlines and write software that is both readable and
-          maintanable.
+          I like to consider myself a web developer rather than just a frontend
+          or backend specialist. My motto in the field is “A junior forever,”
+          which reminds me to continually improve my skills, especially the
+          foundational basics.
         </p>
 
         <Link
