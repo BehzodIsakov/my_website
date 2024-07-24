@@ -35,7 +35,7 @@ export default function Footer() {
       </address>
       <hr className='mt-12 mb-4' />
       <p className='w-fit text-sm'>
-        Built with TypeScript, Tailwind &amp; Next.js
+        Built with Next.js, TypeScript &amp; Tailwind
       </p>
     </footer>
   );
