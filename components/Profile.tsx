@@ -5,16 +5,18 @@ export default function Profile() {
   return (
     <section className='flex mt-8 sm:mt-20 gap-8 items-center sm:items-start flex-col-reverse sm:flex-row'>
       <div>
-        <h1>Hello! My name is Bekzod and I&apos;m a web developer</h1>
+        <h1>Hello! My name is Bekzod and I am a web-developer</h1>
         <p>
-          I am a front-end developer with proven experience in building
-          different types of consumer and enterprise web apps. I love creating
-          an aesthetic design into a user-friendly, responsive and fast product.
+          I am a front-end developer with knowledge in backend technologies such
+          as Node.js and MongoDB. Although my main focus is on frontend
+          technologies, I always try to find time to enhance my backend skills.
+          I am currently teaching frontend technologies at one of the top
+          bootcamps in the country.
         </p>
         <p>
-          I am experienced in from working in a small startup to working in
-          larger cross-functional teams and developing consumer and enterprise
-          apps such as CRM, CMS systems and online learning platform.
+          I have almost 2 years of experience working on real-world
+          applications, from building static landing pages in Next.js to
+          developing CRM systems for offices with thousands of clients.
         </p>
 
         <Link

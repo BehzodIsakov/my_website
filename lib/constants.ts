@@ -37,21 +37,15 @@ export const projects: Project[] = [
 ];
 
 export const technologies: string[] = [
-  "HTML5",
-  "CSS",
-  "Bootstrap",
+  "HTML/CSS",
   "Tailwind",
-  "Javascript",
   "Typescript",
-  "React",
-  "Next.js",
-  "React-query",
+  "React/Next.js",
   "Git/Github",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "Mongoose",
-  "Redux/Toolkit",
+  "Node.js/Express.js",
+  "MongoDB/Mongoose",
+  "Redux-toolkit",
+  "React-Query",
 ];
 
 export const skills: string[] = [
