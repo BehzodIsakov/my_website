@@ -56,12 +56,12 @@ export default function Card({
       <div className='flex gap-3 px-1'>
         {productionLink && (
           <Link target='_blank' href={productionLink}>
-            Link
+            Preview
           </Link>
         )}
         {demoLink && (
           <Link target='_blank' href={demoLink}>
-            Video
+            Demo
           </Link>
         )}
         {srcCode && (
