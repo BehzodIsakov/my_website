@@ -6,9 +6,7 @@ export default function Projects() {
   return (
     <section>
       <h2 className='mb-2'>Projects</h2>
-      <h3 className='mb-6'>
-        Some of the things I&apos;ve built:
-      </h3>
+      <h3 className='mb-6'>Some of the things I&apos;ve built:</h3>
       <div className='flex sm:flex-wrap gap-x-[4%] gap-y-12 mb-3 pb-3 overflow-auto'>
         {projects.map((project, i) => (
           <div key={i} className='basis-[48%]'>
@@ -23,7 +21,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <Link href='/projects' className='button-link-secondary'>
+      <Link href='/projects' className='action-link-secondary'>
         View all
       </Link>
     </section>
