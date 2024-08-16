@@ -18,6 +18,7 @@ export const projects: Project[] = [
       "Framer-motion",
       "i18next",
       "Axios",
+      "Dark mode",
       "Markdown",
       "React-query",
       "Role based routing",
