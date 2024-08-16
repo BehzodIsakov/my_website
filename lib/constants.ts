@@ -38,7 +38,7 @@ export const projects: Project[] = [
       srcCode: "https://github.com/BekzodIsakov/product-list",
       demo: "https://www.youtube.com/watch?v=lnrNaOMfSTA&ab_channel=user",
     },
-    stack: ["React"],
+    stack: ["Pagination", "Responsive"],
   },
   {
     title: "Weather app",
@@ -51,6 +51,18 @@ export const projects: Project[] = [
       demo: "",
     },
     stack: ["React"],
+  },
+  {
+    title: "Responsive grid",
+    description:
+      "A responsive grid testimonials section. Built as a challenge from frontendmentor.io",
+    imgSrc: "/assets/screenshot-testimonials.png",
+    links: {
+      production: "https://friendly-biscotti-1635c5.netlify.app/",
+      srcCode: "https://github.com/BekzodIsakov/frontendmentor/tree/main/testimonials-grid-section-main",
+      demo: "",
+    },
+    stack: ["Responsive", "Sass", "BEM", "Accessibility", ],
   },
 ];
 

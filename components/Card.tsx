@@ -51,9 +51,7 @@ export default function Card({
       </div>
       <h4 className='text-xl font-semibold mb-2'>{title}</h4>
       <p className='text-sm line-clamp-3'>
-        {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Laboriosam perferendis officia qui quaerat, pariatur necessitatibus!
-        Modi alias quia id sed?
+        {description}
       </p>
       <ul className='flex gap-2 mb-2 flex-wrap'>
         {stack.map((t, idx) => (
