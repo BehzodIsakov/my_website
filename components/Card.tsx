@@ -50,14 +50,12 @@ export default function Card({
         />
       </div>
       <h4 className='text-xl font-semibold'>{title}</h4>
-      <p className='text-sm line-clamp-3'>
-        {description}
-      </p>
+      <p className='text-sm line-clamp-3'>{description}</p>
       <ul className='flex gap-2 my-4 flex-wrap'>
         {stack.map((s, idx) => (
           <li
             key={idx}
-            className='text-xs bg-indigo-100 px-2 py-0.5 rounded-full shadow-sm'
+            className='text-xs dark:text-gray-800 bg-indigo-100 px-2 py-0.5 rounded-full shadow-sm'
           >
             {s}
           </li>
