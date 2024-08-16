@@ -3,8 +3,9 @@ import { Project } from "./types";
 export const projects: Project[] = [
   {
     title: "Personal collections app",
-    description:
-      "Collection app that lets create, update and delete collections of different items. There're 3 types of users. Anauthenticated users can only view collections. Authenticated users can control their collection while admin users can authorize other users, such as enabling/disabling other admins and blocking/unblocking users. The app also responds to different viewport sizes.",
+    // description:
+    //   "Collection app that lets create, update and delete collections of different items. There're 3 types of users. Anauthenticated users can only view collections. Authenticated users can control their collection while admin users can authorize other users, such as enabling/disabling other admins and blocking/unblocking users. The app also responds to different viewport sizes.",
+    description: "A fullstack app that features authentication and authorization, role based routing, global state management, i18-internationalization, dark mode, AWS S3 storage integration, socket.io for live commenting, MongoDB database and so on.",
     imgSrc: "/assets/screenshot-collection.png",
     links: {
       production: "https://personal-collections-app.netlify.app/",
@@ -18,10 +19,12 @@ export const projects: Project[] = [
       "Framer-motion",
       "i18next",
       "Axios",
+      "Redux",
       "Dark mode",
       "Markdown",
       "React-query",
       "Role based routing",
+      "Socket.io",
       "Express.js", 
       "Authentication",
       "AWS S3",
