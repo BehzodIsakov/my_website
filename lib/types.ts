@@ -12,4 +12,5 @@ export interface Project {
     srcCode: string;
     demo?: string;
   };
+  stack: string[];
 }

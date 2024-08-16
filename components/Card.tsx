@@ -9,6 +9,7 @@ interface CardProps {
   srcCode: string;
   demoLink?: string;
   productionLink?: string;
+  stack: string[];
 }
 
 function CardHeader() {
@@ -34,6 +35,7 @@ export default function Card({
   srcCode,
   demoLink = "",
   productionLink = "",
+  stack,
 }: CardProps) {
   return (
     <div>
@@ -47,26 +49,57 @@ export default function Card({
           className='w-full'
         />
       </div>
-      <h4 className='text-xl font-semibold'>{title}</h4>
+      <h4 className='text-xl font-semibold mb-2'>{title}</h4>
       <p className='text-sm line-clamp-3'>
         {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Laboriosam perferendis officia qui quaerat, pariatur necessitatibus!
         Modi alias quia id sed?
       </p>
-      <div className='flex gap-3 px-1'>
+      <ul className='flex gap-2 mb-2 flex-wrap'>
+        {stack.map((t, idx) => (
+          <li
+            key={idx}
+            className='text-xs bg-indigo-100 px-2 py-0.5 rounded-full shadow-sm'
+          >
+            {t}
+          </li>
+        ))}
+      </ul>
+      <div className='flex gap-4 px-1'>
         {productionLink && (
           <Link target='_blank' href={productionLink}>
             Preview
+            <Image
+              src={"/assets/external-link-icon.svg"}
+              alt={"external-link-icon"}
+              width={15}
+              height={15}
+              className='inline-block ml-0.5'
+            />
           </Link>
         )}
         {demoLink && (
           <Link target='_blank' href={demoLink}>
             Demo
+            <Image
+              src={"/assets/video-icon2.svg"}
+              alt={"video-icon"}
+              width={18}
+              height={18}
+              className='inline-block ml-0.5'
+            />
           </Link>
         )}
         {srcCode && (
           <Link target='_blank' href={srcCode}>
             Github
+            <Image
+              src={"/assets/code-icon.svg"}
+              alt={"code-icon"}
+              width={20}
+              height={20}
+              className='inline-block ml-0.5'
+            />
           </Link>
         )}
       </div>

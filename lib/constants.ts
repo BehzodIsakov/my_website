@@ -11,6 +11,21 @@ export const projects: Project[] = [
       srcCode: "https://github.com/BekzodIsakov/personal-collections-app",
       demo: "",
     },
+    stack: [
+      "Fullstack",
+      "React",
+      "Chakra-UI",
+      "Framer-motion",
+      "i18next",
+      "Axios",
+      "Markdown",
+      "React-query",
+      "Role based routing",
+      "Express.js", 
+      "Authentication",
+      "AWS S3",
+      "Mongoose", 
+    ],
   },
   {
     title: "E-store",
@@ -22,6 +37,7 @@ export const projects: Project[] = [
       srcCode: "https://github.com/BekzodIsakov/product-list",
       demo: "https://www.youtube.com/watch?v=lnrNaOMfSTA&ab_channel=user",
     },
+    stack: ["React"],
   },
   {
     title: "Weather app",
@@ -33,6 +49,7 @@ export const projects: Project[] = [
       srcCode: "https://github.com/BekzodIsakov/weather_app",
       demo: "",
     },
+    stack: ["React"],
   },
 ];
 

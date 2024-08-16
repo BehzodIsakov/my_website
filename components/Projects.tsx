@@ -9,7 +9,7 @@ export default function Projects() {
       <h3 className='mb-6'>Some of the things I&apos;ve built:</h3>
       <div className='flex sm:flex-wrap gap-x-[4%] gap-y-12 mb-3 pb-3 overflow-auto'>
         {projects.map((project, i) => (
-          <div key={i} className='basis-[48%]'>
+          <div key={i} className='sm:basis-[48%]'>
             <Card
               title={project.title}
               description={project.description}
@@ -17,6 +17,7 @@ export default function Projects() {
               srcCode={project.links.srcCode}
               productionLink={project.links.production}
               demoLink={project.links.demo}
+              stack={project.stack}
             />
           </div>
         ))}
