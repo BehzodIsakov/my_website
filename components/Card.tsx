@@ -53,13 +53,13 @@ export default function Card({
       <p className='text-sm line-clamp-3'>
         {description}
       </p>
-      <ul className='flex gap-2 mb-2 flex-wrap'>
-        {stack.map((t, idx) => (
+      <ul className='flex gap-2 mb-4 flex-wrap'>
+        {stack.map((s, idx) => (
           <li
             key={idx}
             className='text-xs bg-indigo-100 px-2 py-0.5 rounded-full shadow-sm'
           >
-            {t}
+            {s}
           </li>
         ))}
       </ul>
