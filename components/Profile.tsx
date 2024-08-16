@@ -21,7 +21,7 @@ export default function Profile() {
 
         <Link
           href='/about'
-          className='block w-fit mt-4 text-indigo-400 font-light'
+          className='block w-fit mt-4 link-color'
         >
           Read more
         </Link>
