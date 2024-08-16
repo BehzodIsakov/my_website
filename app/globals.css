@@ -2,6 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --bg-color: theme(colors.neutral.50);
+    --bg-color-dark: theme(colors.gray.800);
+    --dot-color: theme(colors.neutral.400);
+    --dot-color-dark: theme(colors.gray.600);
+    --indigo: theme(colors.indigo.400);
+    --dot-size: 1px;
+    --dot-space: 22px;
+  }
+
+  body {
+    @apply text-primary dark:text-primary-dark bg-dotted dark:bg-dotted-dark;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-ternary dark:text-ternary-dark mb-[0.6em] w-fit bg-primary dark:bg-primary-dark;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-lg text-secondary dark:text-secondary-dark;
+  }
+
+  p {
+    @apply mb-3 bg-primary dark:bg-primary-dark;
+  }
+
+  a[href] {
+    @apply hover:transition-opacity hover:opacity-70;
+  }
+
+  a[href]:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-offset-3;
+    outline-color: var(--indigo);
+  }
+}
+
 @layer utilities {
   .bg-primary {
     @apply bg-neutral-50;
@@ -67,12 +121,16 @@
 }
 
 @layer components {
-  .action-link-primary {
+  a.link-color {
+    @apply text-indigo-400 font-light;
+  }
+
+  a.action-link-primary {
     @apply inline-block bg-neutral-800 dark:bg-neutral-800 hover:opacity-90 text-neutral-100 font-light py-2.5 px-8 mt-4 rounded-md;
   }
 
-  .action-link-secondary {
-    @apply inline-block border border-neutral-500 py-1.5 px-4 rounded-sm;
+  a.action-link-secondary {
+    @apply inline-block border text-inherit border-neutral-500 py-1.5 px-4 rounded-sm;
   }
 
   .text-gradient {
@@ -93,59 +151,5 @@
 
   .button-secondary {
     @apply bg-neutral-200 hover:bg-neutral-300 px-3 py-1 rounded-sm transition-colors duration-75;
-  }
-}
-
-@layer base {
-  :root {
-    --bg-color: theme(colors.neutral.50);
-    --bg-color-dark: theme(colors.gray.800);
-    --dot-color: theme(colors.neutral.400);
-    --dot-color-dark: theme(colors.gray.600);
-    --indigo: theme(colors.indigo.400);
-    --dot-size: 1px;
-    --dot-space: 22px;
-  }
-
-  body {
-    @apply text-primary dark:text-primary-dark bg-dotted dark:bg-dotted-dark;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-ternary dark:text-ternary-dark mb-[0.6em] w-fit bg-primary dark:bg-primary-dark;
-  }
-
-  h1 {
-    @apply text-4xl font-bold;
-  }
-
-  h2 {
-    @apply text-3xl font-semibold;
-  }
-
-  h3 {
-    @apply text-lg text-secondary dark:text-secondary-dark;
-  }
-
-  p {
-    @apply mb-3 bg-primary dark:bg-primary-dark;
-  }
-
-  a {
-    @apply hover:transition-opacity hover:opacity-70;
-  }
-
-  a[href]:focus-visible,
-  button:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    @apply outline-offset-3;
-    outline-color: var(--indigo);
   }
 }
