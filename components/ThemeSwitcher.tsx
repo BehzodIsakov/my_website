@@ -55,7 +55,7 @@ const ThemeSwitcher = () => {
   const [isMounted, setIsMounted] = useState(false);
   const { theme: activeTheme, themes, setTheme } = useTheme();
 
-  function changeTheme(theme: string) {
+  function selectTheme(theme: string) {
     setTheme(theme);
     setIsOpen(false);
   }
@@ -101,7 +101,7 @@ const ThemeSwitcher = () => {
             {themes.map((theme) => (
               <li key={theme} className='hover:bg-indigo-50'>
                 <button
-                  onClick={() => changeTheme(theme)}
+                  onClick={() => selectTheme(theme)}
                   className={clsx(
                     activeTheme === theme && "text-indigo-400",
                     "w-full flex items-center gap-2 px-2 py-1 cursor-pointer"
