@@ -19,10 +19,7 @@ export default function Profile() {
           developing CRM systems for offices with thousands of clients.
         </p>
 
-        <Link
-          href='/about'
-          className='block w-fit mt-4 link-color'
-        >
+        <Link href='/about' className='block w-fit mt-4 link-color'>
           Read more
         </Link>
 
@@ -35,14 +32,14 @@ export default function Profile() {
         </Link>
       </div>
 
-      <div className='w-1/2 sm:basis-1/3 sm:shrink-0 mb-3'>
+      <div className='sm:basis-1/3 sm:shrink-0 mb-3'>
         <Image
           // priority
           src={"/bekzod_isakov.webp"}
           alt='Bekzod Isakov'
           width={550}
           height={550}
-          className='rounded-full'
+          className='w-[200px] sm:w-full mx-auto rounded-full'
         />
       </div>
     </section>
