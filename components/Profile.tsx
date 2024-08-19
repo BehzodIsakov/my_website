@@ -39,7 +39,7 @@ export default function Profile() {
           alt='Bekzod Isakov'
           width={550}
           height={550}
-          className='w-[200px] sm:w-full mx-auto rounded-full'
+          className='w-[150px] sm:w-full mx-auto rounded-full'
         />
       </div>
     </section>
