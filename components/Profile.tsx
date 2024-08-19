@@ -8,9 +8,7 @@ export default function Profile() {
         <h1>Hello! My name is Bekzod and I am a web-developer</h1>
         <p>
           I am a front-end developer with knowledge in backend technologies such
-          as Node.js and MongoDB. Although my main focus is on frontend
-          technologies, I always try to find time to enhance my backend skills.
-          I am currently teaching frontend technologies at one of the top
+          as Node.js and MongoDB. I am currently teaching frontend technologies at one of the top
           bootcamps in the country.
         </p>
         <p>
