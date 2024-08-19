@@ -16,7 +16,7 @@ const nunito = Nunito({ subsets: ["latin"] });
 
 export default function Header() {
   return (
-    <header className='flex justify-between items-center mb-8'>
+    <header className='flex justify-between items-center mb-4 sm:mb-8'>
       <Link
         href='/'
         className={`font-semibold text-xl px-2 tracking-wide ${nunito.className}`}

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Profile() {
   return (
-    <section className='flex mt-8 sm:mt-20 gap-8 items-center sm:items-start flex-col-reverse sm:flex-row'>
+    <section className='flex mt-6 sm:mt-20 gap-8 items-center sm:items-start flex-col-reverse sm:flex-row'>
       <div>
         <h1>Hello! My name is Bekzod and I am a web-developer</h1>
         <p>
