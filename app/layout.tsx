@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Bekzod Isakov",
   description: "Personal portfolio",
+  verification: { google: "LszkQ400U6C7Ncd88Bpbug7Cje-UmHdXkA6zut-P" },
 };
 
 export default function RootLayout({
