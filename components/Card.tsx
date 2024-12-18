@@ -49,7 +49,7 @@ export default function Card({
           className='w-full'
         />
       </div>
-      <h4 className='text-xl font-semibold'>{title}</h4>
+      <h4 className='text-xl font-semibold'><Link href={productionLink}>{title}</Link></h4>
       <p className='text-sm line-clamp-3'>{description}</p>
       <ul className='flex gap-2 my-4 flex-wrap'>
         {stack.map((s, idx) => (
