@@ -7,7 +7,7 @@ export default function Skills() {
       <h2 className='mb-4'>Technologies &amp; Skills</h2>
       <ul className='flex justify-center flex-wrap gap-3 max-w-xl mb-9'>
         {technologies.map((t, i) => (
-          <Badge key={i}>{t}</Badge>
+          <li key={i}><Badge>{t}</Badge></li>
         ))}
       </ul>
 
