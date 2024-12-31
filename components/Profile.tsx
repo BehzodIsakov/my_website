@@ -35,9 +35,9 @@ export default function Profile() {
           // priority
           src={"/bekzod_isakov.webp"}
           alt='Bekzod Isakov'
-          width={550}
-          height={550}
-          className='w-[150px] sm:w-full mx-auto rounded-full'
+          width={500}
+          height={500}
+          className='w-36 sm:w-full mx-auto rounded-full'
         />
       </div>
     </section>
