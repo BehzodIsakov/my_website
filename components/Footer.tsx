@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className='px-1 sm:px-12'>
+    <footer>
       <h2>Get in touch</h2>
       <address className='w-fit not-italic bg-primary dark:bg-primary-dark'>
         Feel free to reach me at{" "}

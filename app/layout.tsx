@@ -23,12 +23,12 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute='class' themes={["light", "dark"]}>
-          <div className='min-h-screen max-w-[900px] m-auto flex flex-col py-6 px-2 overflow-x-hidden'>
+          <div className='min-h-screen custom-container mx-auto flex flex-col overflow-x-hidden sm:gap-8'>
             <Header />
-            <main className='flex flex-col gap-20 grow px-1 sm:px-12 mb-20'>
-              {children}
-            </main>
+            {/* <div className="custom-container flex flex-col grow px-4"> */}
+            <main className='space-y-20 grow mb-20 '>{children}</main>
             <Footer />
+            {/* </div> */}
           </div>
         </ThemeProvider>
         <Analytics />
