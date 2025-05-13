@@ -27,7 +27,7 @@
   }
 
   h1 {
-    @apply text-3xl sm:text-4xl leading-snug font-semibold;
+    @apply text-3xl sm:text-4xl font-semibold;
   }
 
   h2 {
