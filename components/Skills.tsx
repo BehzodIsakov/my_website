@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <section>
       <h2 className='mb-4'>Technologies &amp; Skills</h2>
-      <ul className='flex justify-center flex-wrap gap-3 max-w-xl mb-9'>
+      <ul className='flex flex-wrap gap-3 max-w-xl mb-9'>
         {technologies.map((t, i) => (
           <li key={i}><Badge>{t}</Badge></li>
         ))}
