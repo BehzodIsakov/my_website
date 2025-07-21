@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className='flex flex-col items-center mt-4'>
-      <div className='w-1/2 sm:w-1/3 md:w-1/4 mb-4'>
+    <div className='mt-4'>
+      <div className='mb-8'>
         <Image
           src={"/bekzod_isakov.webp"}
           alt='Bekzod Isakov'
           width={250}
           height={250}
-          className='rounded-full'
+          className='rounded-full mx-auto w-36 sm:w-48'
         />
       </div>
       <div>

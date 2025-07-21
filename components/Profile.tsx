@@ -30,14 +30,13 @@ export default function Profile() {
         </Link>
       </div>
 
-      <div className='sm:basis-1/4 sm:shrink-0 mb-3'>
+      <div className='sm:shrink-0 mb-3'>
         <Image
-          // priority
           src={"/bekzod_isakov.webp"}
           alt='Bekzod Isakov'
           width={500}
           height={500}
-          className='w-32 sm:w-full mx-auto rounded-full'
+          className='w-32 sm:w-48 rounded-full'
         />
       </div>
     </section>
