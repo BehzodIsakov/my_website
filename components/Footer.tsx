@@ -4,12 +4,12 @@ export default function Footer() {
       <h2>Get in touch</h2>
       <address className='w-fit not-italic bg-primary dark:bg-primary-dark'>
         Feel free to reach me at{" "}
-        <a href='mailto: bekzodisakov18@gmail.com' className='text-gradient'>
-          bekzodisakov18@gmail.com
+        <a href='mailto: isakovbehzod18@gmail.com' className='text-gradient'>
+          isakovbehzod18@gmail.com
         </a>
         . You can also find me on{" "}
         <a
-          href='https://twitter.com/yusufisakov'
+          href='https://x.com/yusufisakov'
           target='_blank'
           className='text-gradient'
         >
@@ -17,7 +17,7 @@ export default function Footer() {
         </a>
         ,{" "}
         <a
-          href='https://github.com/BekzodIsakov'
+          href='https://github.com/BehzodIsakov'
           target='_blank'
           className='text-gradient'
         >
