@@ -1,12 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import { Nunito } from "next/font/google";
+import clsx from "clsx";
+
 import Navigation from "./Navigation";
 import { NavLink } from "@/lib/types";
 import MobileNavigation from "./MobileNavigation";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { Nunito } from "next/font/google";
-import { useEffect, useState } from "react";
 
 const navLinks: NavLink[] = [
   { name: "about", href: "/about" },
@@ -34,14 +36,15 @@ export default function Header() {
 
   return (
     <header
-      className={`py-4 transition-all duration-300 ${
-        isSticky ? "fixed top-0 w-full backdrop-blur-xl bg-white/80 dark:bg-blue-500/10 shadow-lg" : ""
-      }`}
+      className={`py-7 transition-all duration-300 ${clsx(
+        isSticky &&
+          "fixed top-0 w-full backdrop-blur-xl bg-white/80 dark:bg-blue-500/10 shadow-lg"
+      )}`}
     >
       <div className='flex justify-between items-center mx-auto'>
         <Link
           href='/'
-          className={`font-semibold text-xl tracking-wide ${nunito.className}`}
+          className={`font-semibold text-xl tracking-wide underline ${nunito.className}`}
         >
           Bekzod Isakov
         </Link>
