@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Profile() {
   return (
-    <section className='flex mt-6 sm:mt-20 gap-8 items-center sm:items-start flex-col-reverse sm:flex-row'>
+    <section className='flex mt-6 sm:mt-20 gap-x-16 gap-y-8 items-center sm:items-start flex-col-reverse sm:flex-row'>
       <div>
         <h1>Hello! My name is Bekzod and I am a web-developer</h1>
         <p>
@@ -22,7 +22,7 @@ export default function Profile() {
         </Link>
 
         <Link
-          href='https://github.com/BekzodIsakov'
+          href='https://github.com/IsakovBehzod'
           target='_blank'
           className='action-link-primary'
         >
@@ -30,14 +30,14 @@ export default function Profile() {
         </Link>
       </div>
 
-      <div className='sm:basis-1/3 sm:shrink-0 mb-3'>
+      <div className='sm:basis-1/4 sm:shrink-0 mb-3'>
         <Image
           // priority
           src={"/bekzod_isakov.webp"}
           alt='Bekzod Isakov'
           width={500}
           height={500}
-          className='w-36 sm:w-full mx-auto rounded-full'
+          className='w-32 sm:w-full mx-auto rounded-full'
         />
       </div>
     </section>
